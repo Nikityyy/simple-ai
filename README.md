@@ -103,3 +103,16 @@ inputs = tokenizer.encode(input_text, return_tensors="pt").to(model.device)
 
 outputs = model.generate(inputs, max_new_tokens=50)
 print(tokenizer.decode(outputs[0]))
+```
+
+---
+
+## 🛠️ The truly open-source repos
+
+simple-ai is a key component of my initiative to build and release a complete, truly open-source stack for language modeling. All components are designed to work together seamlessly.
+
+*   **Tokenizer:** **[Hastings](https://github.com/Nikityyy/Hastings)** - A modern, efficient tokenizer with a 32k vocabulary.
+*   **Dataset:** **[Kyoto-Corpus](https://github.com/Nikityyy/Kyoto-Corpus)** - A high-quality, small-scale dataset for instruction tuning.
+*   **Model:** **[lille](https://github.com/Nikityyy/lille)** - A powerful 130-million-parameter model trained from scratch using the Hastings tokenizer.
+*   **Optimizer:** **[Sophia-Triton](https://github.com/Nikityyy/Sophia-Triton)** - A memory-efficient, Triton-based implementation of the SophiaG optimizer.
+*   **Evaluations:** **[simple-eval](https://github.com/Nikityyy/simple-eval)** - A straightforward framework for evaluating model performance using an LLM as a Judge.
